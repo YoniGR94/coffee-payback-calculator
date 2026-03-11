@@ -1,26 +1,26 @@
 {
-    "id": "CD880E93",
-    "path": "C:/R projects/coffee-payback-calculator/package.json",
-    "project_path": "package.json",
-    "type": "json",
+    "id": "6852D636",
+    "path": "C:/R projects/coffee-payback-calculator/src/main.jsx",
+    "project_path": "src/main.jsx",
+    "type": "text",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1773226091238.0,
+    "created": 1773244603458.0,
     "source_on_save": false,
     "relative_order": 3,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "27,0",
-        "scrollLine": "6"
+        "cursorPosition": "0,0",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1773180607,
+    "lastKnownWriteTime": 1773180547,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1773180607,
+    "last_content_update": 1773180547,
     "read_only": false,
     "read_only_alternatives": []
 }
