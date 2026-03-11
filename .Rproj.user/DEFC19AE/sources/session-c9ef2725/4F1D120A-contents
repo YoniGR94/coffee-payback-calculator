@@ -64,12 +64,12 @@ const drinkLabel = (d) => {
 };
 
 const funnyMessage = (t) => {
-  if (t < 2)  return "שותה בצניעות. כנראה גם לא מדפיס יותר מדי. 🖨️";
-  if (t < 4)  return "סביר. האמרכלות עדיין לא מודאגת. 😌";
-  if (t < 7)  return "מתחילים להרגיש את זה בתקציב. ☕☕";
-  if (t < 10) return "האמרכלות בדרך אליך עם המחאה. 📬";
-  if (t < 15) return "אתה בטוח שאתה לא עובד כבריסטה? ⛾";
-  return "אתה בעצם מממן חצי מטבחון. כבוד. 🏆";
+  if (t < 3)  return "שותה בצניעות. כנראה גם לא מדפיס יותר מדי. 🖨️";
+  if (t < 6)  return "סביר. האמרכלות עדיין לא מודאגת. 😌";
+  if (t < 12)  return "מתחילים להרגיש את זה בתקציב. ☕☕";
+  if (t < 20) return "האמרכלות בדרך אליך עם המחאה. 📬";
+  if (t < 40) return "אתה בעצם מממן חצי מטבחון. כבוד. 🏆";
+  return "אתה בטוח שאתה לא עובד כבריסטה? ⛾";
 };
 
 const shareWhatsApp = (total, confirmed) => {
@@ -83,8 +83,9 @@ const shareWhatsApp = (total, confirmed) => {
     const m = DRINK_META.find(x => x.key === type);
     return `${m.emoji} ${m.label} ×${count} — ${cost.toFixed(2)} ₪`;
   });
-  const text = `☕ מחשבון קפה האמרכלות\n\n${lines.join("\n")}\n\nסה"כ: ${total.toFixed(2)} ₪\n\nיש לפנות לאמרכלות לקבלת ההחזר 😄`;
-  window.open(`https://coffee-payback-calculator.vercel.app/`, "_blank");
+  const appUrl = window.location.href;
+  const text = `☕ מחשבון קפה האמרכלות\n\n${lines.join("\n")}\n\nסה"כ: ${total.toFixed(2)} ₪\n\nיש לפנות לאמרכלות לקבלת ההחזר 😄\n\nלחישוב עצמאי: ${appUrl}`;
+  window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
 };
 
 // ─── Styles ────────────────────────────────────────────────────────────────

@@ -3,7 +3,7 @@
     "path": "C:/R projects/coffee-payback-calculator/src/App.jsx",
     "project_path": "src/App.jsx",
     "type": "text",
-    "hash": "0",
+    "hash": "1851175165",
     "contents": "",
     "dirty": false,
     "created": 1773264218735.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "70,52",
-        "scrollLine": "57"
+        "cursorPosition": "72,2",
+        "scrollLine": "61"
     },
     "folds": "",
-    "lastKnownWriteTime": 1773264053,
+    "lastKnownWriteTime": 1773266958,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1773264053,
+    "last_content_update": 1773266958122,
     "read_only": false,
     "read_only_alternatives": []
 }
