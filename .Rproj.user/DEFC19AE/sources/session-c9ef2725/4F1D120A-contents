@@ -575,7 +575,25 @@ export default function App() {
           </div>
         )}
       </div>
-      
+            </div>
+
+      <div style={{
+        textAlign: "center",
+        fontSize: 12,
+        opacity: 0.7,
+        marginTop: 20
+      }}>
+        © יוני גטהון · 
+        <a 
+          href="https://www.linkedin.com/in/yoni-getahun/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{ color: "inherit", textDecoration: "underline" }}
+        >
+          LinkedIn
+        </a>
+      </div>
+
     </div>
   );
 }
