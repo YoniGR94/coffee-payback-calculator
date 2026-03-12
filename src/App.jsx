@@ -587,9 +587,21 @@ export default function App() {
           href="https://www.linkedin.com/in/yoni-getahun/"
           target="_blank"
           rel="noopener noreferrer"
+          style={{ color: "#091169" }}
         >
           LinkedIn
         </a>
+        
+         · 
+         <a
+           href="כתובת-הגיטהאב-שלך"
+           target="_blank"
+           rel="noopener noreferrer"
+           style={{ color: "#091169", textDecoration: "underline" }}
+         >
+           GitHub
+         </a>
+         
       </div>
       
     </div>
