@@ -594,7 +594,7 @@ export default function App() {
         
          · 
          <a
-           href="כתובת-הגיטהאב-שלך"
+           href="https://github.com/YoniGR94/coffee-payback-calculator"
            target="_blank"
            rel="noopener noreferrer"
            style={{ color: "#091169", textDecoration: "underline" }}
