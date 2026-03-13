@@ -370,7 +370,7 @@ export default function App() {
           background:b.bg, borderRadius:"50%", filter:"blur(68px)", pointerEvents:"none", zIndex:0 }} />
       ))}
 
-      <div style={{ maxWidth: 480, margin: "0 auto", position: "relative", zIndex: 1 }}>
+      <div style={{ maxWidth: 720, margin: "0 auto", position: "relative", zIndex: 1 }}>
         <Steps current={screen} />
 
         {/* ── WELCOME ─────────────────────────────────────────────────────── */}
