@@ -46,8 +46,8 @@ Costs are based on average Israeli market prices, calculated per unit:
 | Tea bag | per bag | ₪1.00 |
 | Hot chocolate powder | per tsp | ₪0.48 |
 | Sugar | per tsp | ₪0.05 |
-| Milk | per liter | ₪6.00 |
-| Soy milk | per liter | ₪8.00 |
+| Milk | per liter | ₪7.20 |
+| Soy milk | per liter | ₪9.00 |
 | Espresso capsule | per capsule | ₪2.00 |
 
 Milk volume is calculated based on a 250ml average cup size × selected milk ratio.
