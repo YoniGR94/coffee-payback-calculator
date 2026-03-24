@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Analytics } from "@vercel/analytics/react"
 
 // ─── Pricing ───────────────────────────────────────────────────────────────
@@ -195,7 +195,27 @@ const DraftCard = ({ draft, setDraft, onAdd }) => {
   const hasMilk = draft.milk && draft.milk !== "ללא";
 
   return (
-    <div style={{ ...glass(0.26, 22), padding: 18, marginBottom: 8 }}>
+    <div style={{ ...glass(0.26, 22), padding: 18, marginBottom: 8, position: "relative" }}>
+      <audio ref={audioRef} loop>
+        <source src="/Breakroom_Blitz.mp3" type="audio/mpeg" />
+      </audio>
+      
+      <button
+        onClick={toggleAudio}
+        style={{
+          position: "absolute",
+          top: "10px",
+          left: "10px",
+          zIndex: 1000,
+          padding: "8px 12px",
+          borderRadius: "8px",
+          border: "none",
+          cursor: "pointer"
+        }}
+      >
+        {isPlaying ? "Pause Music" : "Play Music"}
+      </button>
+      
       {/* Type selector */}
       <div style={{ marginBottom: 14 }}>
         <div style={{ color: "#5c3010", fontWeight: 700, fontSize: 13, marginBottom: 8 }}>סוג משקה</div>
@@ -328,6 +348,21 @@ export default function App() {
   const [confirmed, setConfirmed] = useState([]);
   const [draft, setDraft]         = useState(DEFAULT_DRAFT());
   const [days, setDays]           = useState(1);
+
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const toggleAudio = () => {
+    if (!audioRef.current) return;
+
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+
+    setIsPlaying(!isPlaying);
+  };
 
   const handleAdd = () => {
     setConfirmed(prev => [...prev, { ...draft, _id: Date.now() + Math.random() }]);
