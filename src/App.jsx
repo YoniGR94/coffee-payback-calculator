@@ -189,7 +189,7 @@ const SoyToggle = ({ value, onChange }) => (
 );
 
 // ─── Draft Card ────────────────────────────────────────────────────────────
-const DraftCard = ({ draft, setDraft, onAdd }) => {
+const DraftCard = ({ draft, setDraft, onAdd, audioRef, toggleAudio, isPlaying }) => {
   const u = (k, v) => setDraft(prev => ({ ...prev, [k]: v }));
   const switchType = (t) => setDraft(newDrinkOfType(t));
   const hasMilk = draft.milk && draft.milk !== "ללא";
@@ -449,8 +449,7 @@ export default function App() {
             <div style={{ fontSize: 13, fontWeight: 700, color: "rgba(80,35,5,0.7)", marginBottom: 8 }}>
               {confirmed.length === 0 ? "הגדר את המשקה הראשון:" : "הוסף משקה נוסף:"}
             </div>
-            <DraftCard draft={draft} setDraft={setDraft} onAdd={handleAdd} />
-
+            <DraftCard draft={draft} setDraft={setDraft} onAdd={handleAdd}  audioRef={audioRef}  toggleAudio={toggleAudio} isPlaying={isPlaying} />
             {/* 2. Confirmed list — below the draft */}
             {confirmed.length > 0 && (
               <div style={{ marginTop: 18 }}>
