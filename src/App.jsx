@@ -199,21 +199,30 @@ const DraftCard = ({ draft, setDraft, onAdd, audioRef, toggleAudio, isPlaying })
       <audio ref={audioRef} loop>
         <source src="/Breakroom_Blitz.mp3" type="audio/mpeg" />
       </audio>
-      
+
       <button
         onClick={toggleAudio}
+        aria-label={isPlaying ? "השהה מוזיקה" : "נגן מוזיקה"}
+        title={isPlaying ? "השהה מוזיקה" : "נגן מוזיקה"}
         style={{
-          position: "absolute",
-          top: "10px",
-          left: "10px",
+          ...glass(0.35, 999),
+          position: "fixed",
+          top: 16,
+          left: 16,
           zIndex: 1000,
-          padding: "8px 12px",
-          borderRadius: "8px",
-          border: "none",
-          cursor: "pointer"
+          width: 46,
+          height: 46,
+          border: "1px solid rgba(255,255,255,0.45)",
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: 19,
+          color: "#3d1f00",
+          boxShadow: "0 4px 16px rgba(90,40,5,0.28)",
         }}
       >
-        {isPlaying ? "Pause Music" : "Play Music"}
+        {isPlaying ? "⏸️" : "🎵"}
       </button>
       
       {/* Type selector */}
